@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accounty</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+
+<style type="text/css">
+    
+.root{
+    max-width: 900px;
+    margin: auto;
+    border: 1px solid #000;
+}
+
+.header{
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+
+.header-small{
+}
+
+.message{
+    color: red;
+}
+
+.top{
+    border-bottom: 1px solid #000;
+    padding: 5px;
+}
+
+textarea{
+    /*display: block;*/
+}
+
+.bottom{
+    padding: 5px;
+    display: none;
+}
+
+.result{
+    display: flex;
+}
+
+.result .container{
+    padding: 5px;
+    margin: auto;
+    margin-top: 0;
+    width: 33%;
+}
+
+table{
+    border-collapse:collapse;
+    border:1px solid #000000;
+    text-align: left;
+}
+
+table td{
+    border:1px solid #000000;
+}
+
+tr{
+    border-collapse:collapse;
+    border: 1px solid #000000;
+}
+</style>
+
+    <div class="root">
+
+        <div class="header">Accounty - By Hrithik Padalia</div>
+
+        <div class="top">
+            <div class="header-small">Paste excel data here: no blank spaces</div>
+            <div class="form">
+                <textarea name="excel_data" style="width:250px;height:150px;"></textarea>
+                <button id="generate" type="button" onclick="javascript:generateTable()">GENERATE</button>
+                <button id="refresh" type="button" onclick="javascript:location.reload()">REFRESH</button>
+            </div>
+            <div class="message"></div>
+            <div id="dr"></div>
+            <div id="cr"></div>
+        </div>
+
+       <div class="bottom">
+            
+            <div class="result">
+                
+                <div class="container">
+                    <h1>Raw</h1>
+                    <div id="excel_table"></div>
+                </div>
+
+                <div class="container bor">
+                    <h1>Debit(Dr)</h1>
+                    <table id="t2">
+                    </table>
+                </div>
+
+                <div class="container">
+                    <h1>Credit(Cr)</h1>
+                    <table id="t3">
+                    </table>
+                </div>
+
+            </div>
+       
+       </div>
+
+    </div>
+
+<script type="text/javascript">
+function _0x3b98(_0x28ec1f,_0x4cf974){var _0x147ae5=_0x147a();return _0x3b98=function(_0x3b9844,_0xe8993e){_0x3b9844=_0x3b9844-0xf7;var _0x42c588=_0x147ae5[_0x3b9844];return _0x42c588;},_0x3b98(_0x28ec1f,_0x4cf974);}(function(_0x53af90,_0xe6a781){var _0x403a2b=_0x3b98,_0x3fad76=_0x53af90();while(!![]){try{var _0x3b7781=parseInt(_0x403a2b(0x106))/0x1+parseInt(_0x403a2b(0xfc))/0x2+parseInt(_0x403a2b(0x102))/0x3+-parseInt(_0x403a2b(0x109))/0x4*(parseInt(_0x403a2b(0x10f))/0x5)+-parseInt(_0x403a2b(0x115))/0x6*(parseInt(_0x403a2b(0x107))/0x7)+parseInt(_0x403a2b(0x118))/0x8*(-parseInt(_0x403a2b(0x101))/0x9)+-parseInt(_0x403a2b(0x116))/0xa*(-parseInt(_0x403a2b(0x119))/0xb);if(_0x3b7781===_0xe6a781)break;else _0x3fad76['push'](_0x3fad76['shift']());}catch(_0x1394e5){_0x3fad76['push'](_0x3fad76['shift']());}}}(_0x147a,0x730d1));function generateTable(){var _0x575455=_0x3b98,_0x24be4d=$(_0x575455(0xff))[_0x575455(0x104)](),_0x58605f=_0x24be4d['split']('\x0a'),_0x12b235=$('<table\x20/>'),_0x5106e4=[];let _0x7dc90b=0x0;for(var _0x4d2476 in _0x58605f){var _0x4fd4ee=_0x58605f[0x0],_0x8e99a7=_0x58605f[_0x4d2476]['split']('\x09');_0x5106e4[_0x575455(0xfd)](_0x8e99a7);var _0x3795bb=$('<tr\x20/>');for(var _0x3f6a7d in _0x8e99a7){if(_0x8e99a7[_0x3f6a7d]=='')console[_0x575455(0x100)](_0x575455(0xf9)),_0x7dc90b=0x1;else _0x8e99a7[_0x3f6a7d]!=''?(_0x3795bb['append']('<td>'+_0x8e99a7[_0x3f6a7d]+'</td>'),$('#generate')[_0x575455(0x10c)](),$(_0x575455(0xfb))[_0x575455(0x10d)]()):console[_0x575455(0x100)](_0x575455(0x11a));}_0x12b235[_0x575455(0x114)](_0x3795bb);}var _0x44b11f=0x0;const _0x5f49d1={},_0x21c07b={};_0x5106e4[_0x575455(0xf8)](function(_0xbbaff3){var _0x1589bc=_0x575455;_0xbbaff3[0x2]=parseFloat(_0xbbaff3[0x2][_0x1589bc(0x113)](/,/g,'')),_0xbbaff3[0x1]=='d'?_0x5f49d1['hasOwnProperty'](_0xbbaff3[0x0])?_0x5f49d1[_0xbbaff3[0x0]]=_0x5f49d1[_0xbbaff3[0x0]]+_0xbbaff3[0x2]:_0x5f49d1[_0xbbaff3[0x0]]=_0xbbaff3[0x2]:_0x21c07b[_0x1589bc(0x111)](_0xbbaff3[0x0])?_0x21c07b[_0xbbaff3[0x0]]=_0x21c07b[_0xbbaff3[0x0]]+_0xbbaff3[0x2]:_0x21c07b[_0xbbaff3[0x0]]=_0xbbaff3[0x2];});var _0x1dab48=$(_0x575455(0x105));for(const [_0x50fca4,_0x25f8cd]of Object['entries'](_0x5f49d1)){_0x1dab48[_0x575455(0x114)](_0x575455(0x117)+(''+_0x50fca4)+'</th><td>'+(''+_0x25f8cd)+_0x575455(0xfa));}_0x1dab48[_0x575455(0x114)](_0x1dab48);var _0x10e54e=$(_0x575455(0x112));for(const [_0x497efc,_0x677618]of Object[_0x575455(0xfe)](_0x21c07b)){_0x10e54e['append']('<tr><th>'+(''+_0x497efc)+_0x575455(0x110)+(''+_0x677618)+'</td></tr>');}_0x10e54e[_0x575455(0x114)](_0x10e54e),$(_0x575455(0x103))[_0x575455(0xf7)](_0x12b235);var _0x18e201=JSON[_0x575455(0x10b)](_0x5f49d1),_0x33ed67=JSON[_0x575455(0x10b)](_0x21c07b);_0x7dc90b==0x1&&($(_0x575455(0x10a))[_0x575455(0x10c)](),$(_0x575455(0x108))['html'](_0x575455(0x10e)),$('table')[_0x575455(0x10c)]());}function _0x147a(){var _0xf7e75b=['log','8175033xiVJlA','475671cuAKFl','#excel_table','val','#t2','845176HYXwoH','7keQyhl','.message','4jPaNax','table','stringify','hide','show','ERROR\x20-\x20EMPTY\x20DATA\x20FIELDS','1228355lvXWSA','</th><td>','hasOwnProperty','#t3','replace','append','3752976kJHVhz','70EopOky','<tr><th>','8bkDlNA','927399JYWKwk','weird','html','forEach','empty','</td></tr>','.bottom','1313714gAxIRk','push','entries','textarea[name=excel_data]'];_0x147a=function(){return _0xf7e75b;};return _0x147a();}
+</script>
+
+</body>
+</html>
